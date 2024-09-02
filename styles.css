@@ -1,0 +1,228 @@
+:root{
+    --veryDarkGrayishBlue: hsl(217, 19%, 35%);
+    --desaturatedDarkBlue: hsl(214, 17%, 51%);
+    --grayishBlue: hsl(212, 23%, 69%);
+    --lightGrayishBlue: hsl(210, 46%, 95%);
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    font-family: "Manrope", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.8125rem;
+    background-color: var(--lightGrayishBlue);
+}
+
+img{
+    display: block;
+}
+
+.main-container{
+    background-color: #fff;
+    max-width: 21rem;
+    border-radius: 1rem;
+    box-shadow: 0.3rem 0.3rem 1rem var(--grayishBlue);
+    position: relative;
+}
+
+.main-image{
+    width: 100%;
+    height: 12.5rem;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem; 
+    background: url(./images/drawers.jpg) no-repeat 0 -1.4rem / 100%;
+}
+
+.text-container{
+    padding: 2.25rem 2rem 1.25rem;
+}
+
+.main-title{
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--veryDarkGrayishBlue);
+    line-height: 1.5;
+    letter-spacing: 0.0125rem;
+}
+
+.text{
+    color: var(--desaturatedDarkBlue);
+    margin: 1rem 0 1.5rem;
+    line-height: 1.6;
+    letter-spacing: 0.008rem;
+    word-spacing: 0.065rem;
+}
+
+.visit-card{
+    max-width: 21rem;
+    display: flex;
+}
+
+.avatar{
+    width: 2.5rem;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+.visit-card .text{
+    color: var(--veryDarkGrayishBlue);
+    font-weight: 700;
+    margin: 0;
+}
+
+.visit-card .text span{
+    display: inline-block;
+    color: var(--grayishBlue);
+    font-weight: 500;
+}
+
+.icon-share-container{
+    width: 2rem;
+    height: 2rem;
+    background-color: var(--lightGrayishBlue);
+    border-radius: 50%;
+    align-self: center;
+    position: relative;
+}
+
+.icon-share{
+    width: 0.9375rem;
+    position: relative;
+        top: calc(1rem - 0.5rem); left: calc(1rem - 0.5rem);
+    fill: #6E8098;
+}
+
+
+/*SOCIAL MEDIA*/
+
+.social-media{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--veryDarkGrayishBlue);
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem; 
+    padding: 1rem 0.5rem;
+    position: absolute;
+        bottom: 0;
+}
+
+.share{
+    text-transform: uppercase;
+    color: var(--grayishBlue);
+    letter-spacing: 0.3125rem;
+}
+
+.list{
+    display: flex;
+    list-style: none;
+    position: relative;
+        left: -1.5rem; 
+}
+
+.icon-svg{
+    margin-right: 1rem;
+    position: relative;
+        top: 0.2rem;
+}
+
+.social-media .icon-share-container{
+    background-color: var(--desaturatedDarkBlue);
+}
+
+.social-media .icon-share{
+    fill: #fff;
+}
+
+
+@media screen and (min-width: 919px)
+{
+
+    .main-container{
+        display: flex;
+        max-width: 100%;
+        width: 45.625rem;
+        height: 17.5rem;
+        position: relative;
+    }
+
+    .main-image{
+        width: 17.8125rem;
+        height: 100%;
+        border-top-right-radius: 0; 
+        border-bottom-left-radius: 1rem;
+        background: url(./images/drawers.jpg) no-repeat 0rem -0.25rem / 125%;
+    }
+            
+    .text-container{
+        padding: 2rem 2.5rem 1.875rem;
+        width: 27.8125rem;
+    }
+
+    .main-title{
+        font-size: 1.25rem;
+        line-height: 1.4;
+        letter-spacing: 0.0125rem;
+    }
+
+    .text{
+        margin: 0.8rem 0 1.3rem;
+    }
+
+    .visit-card{
+        max-width: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .visit-card .text{
+        position: relative;
+            left: -5rem;
+    }
+
+    .visit-card .text span{
+        display: block;
+        color: var(--grayishBlue);
+        font-weight: 500;
+    }
+
+ 
+    /*SOCIAL-MEDIA*/
+
+    .social-media{
+        width: 15.5rem;
+        justify-content: space-between;
+        border-radius: 1rem;
+        padding-left: 2rem;
+        position: absolute;
+            top: 8rem; right: -4.7rem; bottom: unset;
+    }
+
+    .social-media::after{
+        content: '';
+        width: 1.5625rem;
+        height: 0.875rem;
+        position: absolute;
+            top: 3.4rem; left: 6.5rem;
+        clip-path: polygon(100% 0, 0 0, 53% 100%);
+        background-color: var(--veryDarkGrayishBlue);
+    }
+
+    .social-media .icon-share-container{
+        display: none;
+    }
+
+}
+
+
